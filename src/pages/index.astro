@@ -72,7 +72,19 @@ import Card from '../components/Card.astro';
 			Managing Director<br />
 			09 963 2321<br />
 			021 234 4747<br />
-			<a href="#">Email</a>
+
+<style>
+.cryptedmail:after {
+  content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
+}
+</style>
+
+			<a href="#" class="cryptedmail"
+			data-name="pdiprose"
+			data-domain="gmail"
+			data-tld="com"
+			onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;"></a>
+
 		</p>
 
 		<div>
