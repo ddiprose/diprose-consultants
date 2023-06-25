@@ -7,10 +7,13 @@ import Card from '../components/Card.astro'
   <main>
     <header-wrapper>
       <header>
-        <h1>Diprose Consultants</h1>
-        <h2>Engineering great homes and buildings since 1994</h2>
-        <div class="header-contact">
+        <h2>Diprose Consultants</h2>
+        <h1>Engineering great homes and buildings since 1994</h1>
+        <!-- <div class="header-contact">
           <h3><a href="tel:099632321">09 963 2321</a></h3>
+        </div> -->
+        <div class="contact">
+          <a href="tel:099632321" class="btn">Contact Us Today</a>
         </div>
       </header>
     </header-wrapper>
@@ -30,6 +33,13 @@ import Card from '../components/Card.astro'
           engineering disciplines, our team of experts is dedicated to helping
           clients achieve their goals through innovative and practical
           solutions.
+        </p>
+        <p>
+          <img
+            class="architecture-pic"
+            src="./images/house1.jpg"
+            width="100%"
+          />
         </p>
         <p>
           Whether you need assistance with design, planning, or implementation,
@@ -62,11 +72,6 @@ import Card from '../components/Card.astro'
 
         <h2>Completed works</h2>
         <div class="gallery">
-          <img
-            class="architecture-pic"
-            src="./images/house1.jpg"
-            width="100%"
-          />
           <img
             class="architecture-pic"
             src="./images/house2.jpg"
@@ -220,21 +225,47 @@ import Card from '../components/Card.astro'
   }
   main {
     margin: auto;
-    /* max-width: 120ch; */
+    /* max-width: 140ch; */
   }
   header-wrapper {
     padding: 1.5rem;
+    /* background-image: url('./images/header-bg9.jpg');
+    background-position-x: center; */
+    /* background-position: -100px; */
     background: linear-gradient(#05253e, #0c3c60);
     color: #fff;
     display: block;
+    min-height: 300px;
   }
   header {
     margin: 0 auto;
-    max-width: 120ch;
+    max-width: 140ch;
     position: relative;
   }
-  header .header-contact {
-    display: none;
+  header h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 0;
+  }
+  header h2 {
+    margin-bottom: 0;
+  }
+  header .contact {
+    margin-top: 30px;
+    margin-bottom: 0.83em;
+  }
+  header a.btn {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+  }
+  header a.btn:hover {
+    background-color: #fff;
+    color: initial;
   }
   footer-wrapper {
     padding: 1.5rem;
@@ -244,7 +275,7 @@ import Card from '../components/Card.astro'
   }
   footer {
     margin: 0 auto;
-    max-width: 120ch;
+    max-width: 140ch;
   }
   footer a {
     color: #fff;
@@ -267,7 +298,7 @@ import Card from '../components/Card.astro'
   content {
     margin: 0 auto;
     padding: 10px 0;
-    max-width: 120ch;
+    max-width: 140ch;
     display: block;
   }
   .gallery {
@@ -312,12 +343,6 @@ import Card from '../components/Card.astro'
     /* main {
       width: 70%;
     } */
-    header .header-contact {
-      display: block;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
     header .header-contact a {
       color: #fff;
       text-decoration: none;
@@ -337,11 +362,6 @@ import Card from '../components/Card.astro'
       width: 80px;
       margin-right: 20px;
     }
-  }
-  h1 {
-    font-size: 3rem;
-    font-weight: 500;
-    margin: 0;
   }
   .text-gradient {
     background-image: var(--accent-gradient);
